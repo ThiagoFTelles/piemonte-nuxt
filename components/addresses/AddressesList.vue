@@ -27,7 +27,7 @@
           :key="address.id"
           class="address"
         >
-          <router-link :to="{name: 'address', params:{id: address.id, street:address.street} }">
+          <router-link to="/">
             <h2 class="title">
               {{address.street}}
             </h2>
