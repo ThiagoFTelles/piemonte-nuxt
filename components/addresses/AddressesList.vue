@@ -63,13 +63,13 @@ export default {
   methods: {
     async getAddresses() {
       await this.$axios.$get(`/addresses`).then((r) => {
-        this.addresses = r.addresses.original;
+        this.addresses = r.data;
       });
     },
     searchAddresses() {
       this.addresses = null;
       this.$axios.$get(`/postal-code-search/${this.postalCode}`).then((r) => {
-        this.searchResult = r.address.original;
+        this.searchResult = r.data;
       });
     },
   },

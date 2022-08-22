@@ -47,7 +47,7 @@ export default {
       try {
         this.searchResult = null;
         await this.$axios.$get(`/street-search${this.search}`).then((r) => {
-          this.searchResult = r.length ? r : [];
+          this.searchResult = r.data.length ? r.data : [];
         });
       } catch (e) {
         console.error(e);
